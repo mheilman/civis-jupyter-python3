@@ -1,0 +1,4 @@
+[submodule "civis-jupyter-notebook"]
+	path = civis-jupyter-notebook
+	url = git@github.com:civisanalytics/civis-jupyter-notebook.git
+	branch = terminal
