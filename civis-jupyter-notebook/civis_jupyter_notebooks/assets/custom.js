@@ -23,10 +23,10 @@ if (window.location.pathname == '/notebooks/notebook.ipynb') {
   $('#header-container').show();
   $('a[title="dashboard"]').attr('href', '/notebooks/notebook.ipynb');
 }
-
-$('#maintoolbar-container').append('<div class="btn-group"><button class="btn btn-default" title="open terminal"><i class="fa fa-terminal" aria-hidden="true"></i></button></div>')
-
 $('a[title="dashboard"]').attr('target', '_self');
+$('a[title="dashboard"]').attr('title', 'notebook');
+
+$('#maintoolbar-container').append('<div class="btn-group"><button class="btn btn-default" title="open terminal" onclick="window.location.href = \'/terminals/1\'"><i class="fa fa-terminal" aria-hidden="true"></i></button></div>')
 
 window.setTimeout(function() {
   $("#notebook_name").off();
