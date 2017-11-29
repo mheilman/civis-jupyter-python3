@@ -21,7 +21,9 @@ if (window.location.pathname == '/notebooks/notebook.ipynb') {
   $('a[title="dashboard"]').attr('href', '#');
 } else {
   $('#header-container').show();
-  $('a[title="dashboard"]').attr('href', '/notebooks/notebook.ipynb');
+  $('a[title="dashboard"]').on('click', 'window.history.back(); return false')
+  $('a[title="dashboard"]').prepend('<i class="civicon civicon-book" />')
+  $('a[title="dashboard"]').prepend('<i class="fa fa-angle-left" />')
 }
 $('a[title="dashboard"]').attr('target', '_self');
 $('a[title="dashboard"]').attr('title', 'notebook');
