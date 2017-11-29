@@ -22,6 +22,7 @@ if (window.location.pathname == '/notebooks/notebook.ipynb') {
 } else {
   $('#header-container').show();
   $('a[title="dashboard"]').on('click', 'window.history.back(); return false')
+  $('a[title="dashboard"]').removeAttr('href');
   $('a[title="dashboard"]').prepend('<i class="civicon civicon-book" />')
   $('a[title="dashboard"]').prepend('<i class="fa fa-angle-left" />')
 }
