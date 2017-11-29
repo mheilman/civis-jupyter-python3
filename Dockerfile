@@ -9,7 +9,7 @@ ENV VERSION= \
     VERSION_MICRO= \
     TINI_VERSION=v0.16.1 \
     DEFAULT_KERNEL=python3 \
-    CIVIS_JUPYTER_NOTEBOOK_VERSION=0.2.2
+    CIVIS_JUPYTER_NOTEBOOK_VERSION=0.2.3
 
 # Install Tini
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
@@ -25,4 +25,4 @@ WORKDIR /root/work
 
 # Configure container startup
 ENTRYPOINT ["/tini", "--"]
-CMD ["civis-jupyter-notebooks-start"] 
+CMD ["civis-jupyter-notebooks-start"]
